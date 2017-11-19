@@ -23,8 +23,9 @@ public class AmountWater {
 				for(int k=i+1;k<n;k++) {
 					maxr=max(maxr,a[k]);
 				}
-				w+=min(maxl,maxr)-a[i];
-				System.out.print(i + " - " + w);
+				if(min(maxl,maxr) >a[i])
+					w+=min(maxl,maxr)-a[i];	
+			//	System.out.println(i + " - " + w);
 			}
 			System.out.println(w);
 		}
