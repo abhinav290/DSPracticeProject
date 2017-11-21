@@ -1,8 +1,27 @@
-package src.data_structure.tree;
+package data_structure.tree;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Stack;
 
-public class  NTree<T> {
+public class NTreeTest {
+	
+
+	public static void main(String[] args) {
+		NTree<Integer> tree= new NTree<>();
+		Integer a[] ={4,3,-1,-1,1,2,7,3,1,4,2,1};
+		tree.construct(a);
+		tree.printLevel();
+		System.out.println();
+		tree.printLtoR();
+	}
+}
+class  NTree<T> {
 	Map<T,List<Integer>> map = new HashMap<>();
 	NTree() {
 		//this .root = new Node(val);
